@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aparna's Kitchen - Authentic Maharashtra Masalas & Snacks</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600;700&display=swap');
+        
+        :root {
+            --aparna-orange: #E67300;
+            --kitchen-red: #D42B2B;
+            --cream-bg: #F8F8F0;
+            --dark-green: #2E8B57;
+            --tagline-brown: #8B4513;
+        }
+        
+        .font-playfair {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .font-inter {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, var(--aparna-orange) 0%, var(--kitchen-red) 100%);
+        }
+        
+        .aparna-orange {
+            color: var(--aparna-orange);
+        }
+        
+        .kitchen-red {
+            color: var(--kitchen-red);
+        }
+        
+        .cream-bg {
+            background-color: var(--cream-bg);
+        }
+        
+        .whatsapp-green {
+            background-color: var(--dark-green);
+        }
+        
+        .whatsapp-green:hover {
+            background-color: #1F5F3F;
+        }
+        
+        .tagline-brown {
+            color: var(--tagline-brown);
+        }
+        
+        .product-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .logo-container {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            margin-right: 12px;
+        }
+    </style>
+</head>
+<body class="font-inter cream-bg">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center logo-container">
+                    <svg class="logo-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Mortar -->
+                        <ellipse cx="50" cy="65" rx="25" ry="8" fill="#8B4513"/>
+                        <path d="M25 65 Q25 75 30 80 L70 80 Q75 75 75 65" fill="#8B4513"/>
+                        <!-- Pestle -->
+                        <rect x="45" y="35" width="10" height="30" fill="#654321" transform="rotate(-30 50 50)"/>
+                        <circle cx="38" cy="32" r="6" fill="#654321"/>
+                        <!-- Chili Peppers -->
+                        <path d="M15 70 Q10 75 15 80" stroke="#D42B2B" stroke-width="2" fill="none"/>
+                        <path d="M85 70 Q90 75 85 80" stroke="#D42B2B" stroke-width="2" fill="none"/>
+                        <!-- Turmeric Powder -->
+                        <circle cx="35" cy="75" r="2" fill="#E67300"/>
+                        <circle cx="45" cy="78" r="1.5" fill="#E67300"/>
+                        <circle cx="55" cy="76" r="2" fill="#E67300"/>
+                        <circle cx="65" cy="77" r="1" fill="#E67300"/>
+                    </svg>
+                    <span class="font-playfair text-2xl font-bold">
+                        <span class="aparna-orange">Aparna's</span>
+                        <span class="kitchen-red"> Kitchen</span>
+                    </span>
+                </div>
+                <div class="flex items-center space-x-8">
+                    <a href="#home" class="tagline-brown hover:aparna-orange transition">Home</a>
+                    <a href="#products" class="tagline-brown hover:aparna-orange transition">Products</a>
+                    <a href="#about" class="tagline-brown hover:aparna-orange transition">About</a>
+                    <a href="#contact" class="tagline-brown hover:aparna-orange transition">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-gradient text-white py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="font-playfair text-5xl md:text-6xl font-bold mb-6">
+                    <span class="aparna-orange">Aparna's</span>
+                    <span class="kitchen-red"> Kitchen</span>
+                </h1>
+                <p class="text-xl md:text-2xl mb-8 tagline-brown font-semibold">
+                    Maharashtrian & North Karnataka Flavors
+                </p>
+                <p class="text-lg mb-8 text-white">
+                    Home made in Kolhapur, delivered to your doorstep via courier
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#products" class="bg-white text-aparna-orange px-8 py-3 rounded-full font-semibold hover:bg-orange-50 transition">
+                        Explore Products
+                    </a>
+                    <a href="https://wa.me/919766997037" target="_blank" class="whatsapp-green text-white px-8 py-3 rounded-full font-semibold inline-flex items-center justify-center">
+                        <i class="fab fa-whatsapp mr-2"></i>
+                        Order on WhatsApp +91 97669 97037
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-cream-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="font-playfair text-4xl font-bold aparna-orange mb-6">
+                    From Aparna's Kitchen to Your Home
+                </h2>
+                    <p class="text-gray-600 mb-4">
+                        Located in the heart of Kolhapur, Maharashtra, Aparna's Kitchen brings you the authentic taste of traditional Indian spices and snacks. Each product is carefully handcrafted using age-old recipes passed down through generations.
+                    </p>
+                    <p class="text-gray-600 mb-6">
+                        We take pride in using only the finest ingredients, ensuring that every bite delivers the rich, aromatic flavors that Maharashtra is famous for.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-aparna-orange mr-2"></i>
+                            <span class="tagline-brown">100% Authentic</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-aparna-orange mr-2"></i>
+                            <span class="tagline-brown">Handcrafted</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-aparna-orange mr-2"></i>
+                            <span class="tagline-brown">No Preservatives</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-aparna-orange mr-2"></i>
+                            <span class="tagline-brown">Traditional Recipes</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <div class="bg-orange-100 rounded-full p-8 inline-block">
+                        <i class="fas fa-mortar-pestle text-aparna-orange text-6xl"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="font-playfair text-4xl font-bold tagline-brown mb-4">
+                    Our Authentic Products
+                </h2>
+                <p class="tagline-brown text-lg">
+                    Discover the rich flavors of Maharashtra with our handcrafted selection
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Product Cards -->
+                <div class="product-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="bg-gradient-to-r from-orange-400 to-red-500 h-48 flex items-center justify-center">
+                        <i class="fas fa-pepper-hot text-white text-4xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-playfair text-2xl font-bold tagline-brown mb-2">Shenga Chutney</h3>
+                        <p class="tagline-brown mb-4">Traditional peanut chutney with the perfect blend of spices</p>
+                        <button onclick="orderProduct('Shenga Chutney')" class="w-full bg-aparna-orange text-white py-2 rounded-lg hover:bg-orange-600 transition">
+                            Order Now
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="bg-gradient-to-r from-green-400 to-blue-500 h-48 flex items-center justify-center">
+                        <i class="fas fa-seedling text-white text-4xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-playfair text-2xl font-bold tagline-brown mb-2">Flaxseed Chutney</h3>
+                        <p class="tagline-brown mb-4">Healthy and nutritious flaxseed chutney with omega-3 benefits</p>
+                        <button onclick="orderProduct('Flaxseed Chutney')" class="w-full bg-aparna-orange text-white py-2 rounded-lg hover:bg-orange-600 transition">
+                            Order Now
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="bg-gradient-to-r from-purple-400 to-pink-500 h-48 flex items-center justify-center">
+                        <i class="fas fa-garlic text-white text-4xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-playfair text-2xl font-bold tagline-brown mb-2">Kaanda Lasun Masala</h3>
+                        <p class="tagline-brown mb-4">Classic onion-garlic masala perfect for Maharashtrian dishes</p>
+                        <button onclick="orderProduct('Kaanda Lasun Masala')" class="w-full bg-aparna-orange text-white py-2 rounded-lg hover:bg-orange-600 transition">
+                            Order Now
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="bg-gradient-to-r from-green-500 to-teal-500 h-48 flex items-center justify-center">
+                        <i class="fas fa-leaf text-white text-4xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-playfair text-2xl font-bold tagline-brown mb-2">Curry Leaf Masala</h3>
+                        <p class="tagline-brown mb-4">Aromatic curry leaf masala for authentic South Indian flavors</p>
+                        <button onclick="orderProduct('Curry Leaf Masala')" class="w-full bg-aparna-orange text-white py-2 rounded-lg hover:bg-orange-600 transition">
+                            Order Now
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="bg-gradient-to-r from-yellow-400 to-orange-500 h-48 flex items-center justify-center">
+                        <i class="fas fa-sun text-white text-4xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-playfair text-2xl font-bold tagline-brown mb-2">Goda Masala</h3>
+                        <p class="tagline-brown mb-4">Sweet and spicy Goda masala, a specialty of Maharashtra</p>
+                        <button onclick="orderProduct('Goda Masala')" class="w-full bg-aparna-orange text-white py-2 rounded-lg hover:bg-orange-600 transition">
+                            Order Now
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="bg-gradient-to-r from-red-500 to-yellow-500 h-48 flex items-center justify-center">
+                        <i class="fas fa-fire text-white text-4xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-playfair text-2xl font-bold tagline-brown mb-2">Veg Kolhapuri Masala</h3>
+                        <p class="tagline-brown mb-4">Spicy Kolhapuri vegetable masala for that authentic taste</p>
+                        <button onclick="orderProduct('Veg Kolhapuri Masala')" class="w-full bg-aparna-orange text-white py-2 rounded-lg hover:bg-orange-600 transition">
+                            Order Now
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="bg-gradient-to-r from-amber-400 to-yellow-600 h-48 flex items-center justify-center">
+                        <i class="fas fa-jar text-white text-4xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-playfair text-2xl font-bold tagline-brown mb-2">Liquid Jaggery</h3>
+                        <p class="tagline-brown mb-4">Pure liquid jaggery, perfect for traditional sweets</p>
+                        <button onclick="orderProduct('Liquid Jaggery')" class="w-full bg-aparna-orange text-white py-2 rounded-lg hover:bg-orange-600 transition">
+                            Order Now
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="bg-gradient-to-r from-amber-600 to-orange-600 h-48 flex items-center justify-center">
+                        <i class="fas fa-cube text-white text-4xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-playfair text-2xl font-bold tagline-brown mb-2">Kolhapur Special Jaggery</h3>
+                        <p class="tagline-brown mb-4">Premium Kolhapuri jaggery with unique flavor profile</p>
+                        <button onclick="orderProduct('Kolhapur Special Jaggery')" class="w-full bg-aparna-orange text-white py-2 rounded-lg hover:bg-orange-600 transition">
+                            Order Now
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="bg-gradient-to-r from-yellow-500 to-red-500 h-48 flex items-center justify-center">
+                        <i class="fas fa-popcorn text-white text-4xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-playfair text-2xl font-bold tagline-brown mb-2">Kolhapur Bhadang</h3>
+                        <p class="tagline-brown mb-4">Spicy and crunchy Bhadang, a favorite Kolhapur snack</p>
+                        <button onclick="orderProduct('Kolhapur Bhadang')" class="w-full bg-aparna-orange text-white py-2 rounded-lg hover:bg-orange-600 transition">
+                            Order Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shipping & Delivery Info -->
+    <section class="py-16 bg-orange-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="font-playfair text-4xl font-bold tagline-brown mb-4">
+                    Shipping & Delivery
+                </h2>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="bg-orange-100 rounded-full p-6 inline-block mb-4">
+                        <i class="fas fa-truck text-aparna-orange text-3xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-xl tagline-brown mb-2">India Post Shipping</h3>
+                    <p class="tagline-brown">Reliable delivery across India through India Post services</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="bg-orange-100 rounded-full p-6 inline-block mb-4">
+                        <i class="fas fa-clock text-aparna-orange text-3xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-xl tagline-brown mb-2">5-7 Days Delivery</h3>
+                    <p class="tagline-brown">Your order reaches you within 5 to 7 business days</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="bg-orange-100 rounded-full p-6 inline-block mb-4">
+                        <i class="fas fa-gift text-aparna-orange text-3xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-xl tagline-brown mb-2">Free Shipping Above ₹600</h3>
+                    <p class="tagline-brown">Enjoy free shipping on all orders above ₹600 across India</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-gray-800 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="font-playfair text-4xl font-bold mb-4">
+                    Get in Touch
+                </h2>
+                <p class="text-gray-300 text-lg">
+                    Ready to taste authentic Maharashtra flavors? Order now!
+                </p>
+            </div>
+            
+            <div class="text-center">
+                <div class="mb-8">
+                    <i class="fab fa-whatsapp text-green-400 text-5xl mb-4"></i>
+                    <h3 class="text-2xl font-semibold mb-2">Order on WhatsApp</h3>
+                    <p class="text-gray-300 mb-4">Place your orders directly through WhatsApp for quick service</p>
+                    <a href="https://wa.me/919766997037" target="_blank" class="whatsapp-green text-white px-8 py-3 rounded-full font-semibold inline-flex items-center">
+                        <i class="fab fa-whatsapp mr-2"></i>
+                        Chat on WhatsApp +91 97669 97037
+                    </a>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-8 mt-12">
+                    <div>
+                        <i class="fas fa-map-marker-alt text-aparna-orange text-2xl mb-2"></i>
+                        <h4 class="font-semibold mb-1">Location</h4>
+                        <p class="text-gray-300">Kolhapur, Maharashtra, India</p>
+                    </div>
+                    <div>
+                        <i class="fas fa-envelope text-aparna-orange text-2xl mb-2"></i>
+                        <h4 class="font-semibold mb-1">Email</h4>
+                        <p class="text-gray-300">aparnaskitchen@email.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <div class="flex items-center justify-center mb-4">
+                    <svg class="w-8 h-8 mr-3" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Mortar -->
+                        <ellipse cx="50" cy="65" rx="25" ry="8" fill="#8B4513"/>
+                        <path d="M25 65 Q25 75 30 80 L70 80 Q75 75 75 65" fill="#8B4513"/>
+                        <!-- Pestle -->
+                        <rect x="45" y="35" width="10" height="30" fill="#654321" transform="rotate(-30 50 50)"/>
+                        <circle cx="38" cy="32" r="6" fill="#654321"/>
+                        <!-- Chili Peppers -->
+                        <path d="M15 70 Q10 75 15 80" stroke="#D42B2B" stroke-width="2" fill="none"/>
+                        <path d="M85 70 Q90 75 85 80" stroke="#D42B2B" stroke-width="2" fill="none"/>
+                        <!-- Turmeric Powder -->
+                        <circle cx="35" cy="75" r="2" fill="#E67300"/>
+                        <circle cx="45" cy="78" r="1.5" fill="#E67300"/>
+                        <circle cx="55" cy="76" r="2" fill="#E67300"/>
+                        <circle cx="65" cy="77" r="1" fill="#E67300"/>
+                    </svg>
+                    <span class="font-playfair text-2xl font-bold">
+                        <span class="aparna-orange">Aparna's</span>
+                        <span class="kitchen-red"> Kitchen</span>
+                    </span>
+                </div>
+                <p class="text-gray-400 mb-4">Bringing authentic Maharashtra flavors to your home</p>
+                <p class="text-gray-500 text-sm">© 2024 Aparna's Kitchen. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Order product function
+        function orderProduct(productName) {
+            const message = `Hi! I'd like to order ${productName} from Aparna's Kitchen. Please provide me with the details.`;
+            const whatsappUrl = `https://wa.me/919766997037?text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, '_blank');
+        }
+
+        // Add scroll effect to navigation
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                nav.classList.add('shadow-xl');
+            } else {
+                nav.classList.remove('shadow-xl');
+            }
+        });
+    </script>
+</body>
+</html>
